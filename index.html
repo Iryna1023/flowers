@@ -1,12 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flowers</title>
+    <link rel="stylesheet" href="style.css/header.css">
 </head>
+
 <body>
+    <div id="flowerContainer"></div>
+    <!-- Шапка -->
+    <header>
+        <div class="logo">
+            <h1>Квітковий Рай</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Контакти</a></li>
+                <li><a href="#">Про нас</a></li>
+            </ul>
+        </nav>
+        <div class="auth-cart">
+            <button>Увійти</button>
+            <button>Кошик</button>
+        </div>
+        <!-- Бургер-меню -->
+        <div class="burger-menu" id="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+    </header>
     
     
+
+    <!-- Пошукова панель -->
+    <section class="search-section">
+        <input type="text" placeholder="Пошук квітів…" id="search-input">
+        <button>Пошук</button>
+    </section>
+
+    <!-- Банер -->
+    <section class="banner">
+        <h2>Доставка квітів по всьому місту за 2 години!</h2>
+        <button>Переглянути наші квіти</button>
+    </section>
+ <!--Фільтр2-->
+ <section class="filters-2">
+    <button class="filter-2">Фільтр</button>
+    <div class="filter-content">
+        <form>
+            <label for="flower-type-2">Тип квітів:</label>
+            <select id="flower-type-2">
+                <option>Всі</option>
+                <option>Троянди</option>
+                <option>Лілії</option>
+                <option>Тюльпани</option>
+                <option>Орхідеї</option>
+            </select>
+
+            <label for="price-range-2">Ціна:</label>
+            <input type="range" id="price-range-2" min="0" max="1000" step="10" value="500">
+            <span id="price-value-2">500 грн</span>
+
+            <label for="color-2">Колір:</label>
+            <select id="color-2">
+                <option>Всі</option>
+                <option>Червоний</option>
+                <option>Білий</option>
+                <option>Рожевий</option>
+                <option>Жовтий</option>
+            </select>
+
+            <button type="submit">Застосувати фільтри</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Головна секція з фільтром і сіткою товарів -->
+    <section class="main-content">
+        <!-- Фільтри -->
+        <section class="filters">
+            <h3>Фільтр</h3>
+            <form>
+                <label for="flower-type">Тип квітів:</label>
+                <select id="flower-type">
+                    <option>Всі</option>
+                    <option>Троянди</option>
+                    <option>Лілії</option>
+                    <option>Тюльпани</option>
+                    <option>Орхідеї</option>
+                </select>
+
+                <label for="price-range">Ціна:</label>
+                <input type="range" id="price-range" min="0" max="1000" step="10" value="500">
+                <span id="price-value">500 грн</span>
+
+                <label for="color">Колір:</label>
+                <select id="color">
+                    <option>Всі</option>
+                    <option>Червоний</option>
+                    <option>Білий</option>
+                    <option>Рожевий</option>
+                    <option>Жовтий</option>
+                </select>
+
+                <button type="submit">Застосувати фільтри</button>
+            </form>
+        </section>
+       
+        <!-- Сітка товарів -->
+        <section class="product-grid">
+            <div class="product-card" data-type="Троянди" data-color="Жовтий" data-price="350">
+                <img src="img/flower1.jpg" alt="Букет троянд">
+                <h4>Букет троянд "Чарівність"</h4>
+                <p class="product-description">Цей букет ідеальний для романтичних подій. В ньому поєднуються ніжні троянди та ароматні квіти.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12345</p>
+                    <p class="product-price">Ціна: 350 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+
+            <div class="product-card" data-type="Тюльпани" data-color="Рожевий" data-price="450">
+                <img src="img/flower2.jpg" alt="Букет тюльпанів">
+                <h4>Букет тюльпанів "Весна"</h4>
+                <p class="product-description">Яскраві тюльпани, які подарують радість та тепло в будь-яку пору року.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12346</p>
+                    <p class="product-price">Ціна: 450 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+
+            <div class="product-card" data-type="Тюльпани" data-color="Жовтий" data-price="500">
+                <img src="img/flower3.jpg" alt="Букет тюльпанів">
+                <h4>Букет тюльпанів "Жовта весна"</h4>
+                <p class="product-description">Чудові жовті тюльпани, які принесуть теплоту та радість вашому дому.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12347</p>
+                    <p class="product-price">Ціна: 500 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            <div class="product-card" data-type="Троянди" data-color="Червоний" data-price="400">
+                <img src="img/flower4.jpg" alt="Букет червоних троянд">
+                <h4>Букет червоних троянд "Кохання"</h4>
+                <p class="product-description">Червоні троянди, які символізують палке кохання та пристрасті.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12348</p>
+                    <p class="product-price">Ціна: 700 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Тюльпани" data-color="Жовтий" data-price="500">
+                <img src="img/flower3.jpg" alt="Букет жовтих тюльпанів">
+                <h4>Букет тюльпанів "Жовта весна"</h4>
+                <p class="product-description">Чудові жовті тюльпани, які принесуть теплоту та радість вашому дому.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12347</p>
+                    <p class="product-price">Ціна: 500 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Лілії" data-color="Білий" data-price="600">
+                <img src="img/flower8.jpg" alt="Букет білих лілій">
+                <h4>Букет білих лілій "Чистота"</h4>
+                <p class="product-description">Елегантні білі лілії, які додають свіжості та чистоти у будь-який інтер'єр.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12349</p>
+                    <p class="product-price">Ціна: 600 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Орхідеї" data-color="Рожевий" data-price="700">
+                <img src="img/flower5.jpg" alt="Букет рожевих орхідей">
+                <h4>Букет рожевих орхідей "Симфонія"</h4>
+                <p class="product-description">Ніжні рожеві орхідеї, що вражають своєю елегантністю і витонченістю.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12350</p>
+                    <p class="product-price">Ціна: 700 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Троянди" data-color="Білий" data-price="450">
+                <img src="img/flower6.jpg" alt="Букет білих троянд">
+                <h4>Букет білих троянд "Чисте серце"</h4>
+                <p class="product-description">Білі троянди, символізують чистоту та елегантність.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12351</p>
+                    <p class="product-price">Ціна: 450 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Тюльпани" data-color="Червоний" data-price="520">
+                <img src="img/flower7.jpg" alt="Букет червоних тюльпанів">
+                <h4>Букет червоних тюльпанів "Теплі обійми"</h4>
+                <p class="product-description">Червоні тюльпани — символ романтики та тепла в кожному букеті.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12352</p>
+                    <p class="product-price">Ціна: 520 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Лілії" data-color="Жовтий" data-price="580">
+                <img src="img/flower8.jpg" alt="Букет жовтих лілій">
+                <h4>Букет жовтих лілій "Сонячний світ"</h4>
+                <p class="product-description">Яскраві жовті лілії, які привнесуть радість та енергію в будь-яку кімнату.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12353</p>
+                    <p class="product-price">Ціна: 580 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Орхідеї" data-color="Білий" data-price="750">
+                <img src="img/flower9.jpg" alt="Букет білих орхідей">
+                <h4>Букет білих орхідей "Вічна краса"</h4>
+                <p class="product-description">Елегантні білі орхідеї, що підкреслюють витонченість та розкіш.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12354</p>
+                    <p class="product-price">Ціна: 750 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Троянди" data-color="Рожевий" data-price="550">
+                <img src="img/flower10.jpg" alt="Букет рожевих троянд">
+                <h4>Букет рожевих троянд "Ніжність"</h4>
+                <p class="product-description">Рожеві троянди, які створюють атмосферу ніжності та гармонії.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12355</p>
+                    <p class="product-price">Ціна: 550 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+            <div class="product-card" data-type="Тюльпани" data-color="Білий" data-price="480">
+                <img src="img/flower11.jpg" alt="Букет білих тюльпанів">
+                <h4>Букет білих тюльпанів "Ніжність весни"</h4>
+                <p class="product-description">Білі тюльпани, які дарують відчуття свіжості та елегантності.</p>
+                <div class="product-details">
+                    <p class="product-sku">Артикул: 12356</p>
+                    <p class="product-price">Ціна: 480 грн</p>
+                </div>
+                <button>Додати в кошик</button>
+            </div>
+            
+        </section>
+    </section>
+
+    <!-- Підвал -->
+    <footer>
+        <div class="footer-info">
+            <p>Контакти: info@flowershop.com</p>
+            <p>Соціальні мережі:</p>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+        </div>
+    </footer>
+    <script src="js/header.js" defer></script>
+    <script src="js/filter.js" defer></script>
 </body>
 </html>
+

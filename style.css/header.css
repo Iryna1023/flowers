@@ -1,0 +1,501 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc1d9;
+}
+#flowerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('/img/fl-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    animation: fall 5s ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) translateX(0);
+    }
+    100% {
+        transform: translateY(50vh) translateX(0);
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ff68b6;
+    color: white;
+}
+
+header .logo h1 {
+    margin: 0;
+    padding-left: 50px;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.auth-cart button {
+    background-color: white;
+    color: #ff68b6;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-cart button:hover {
+    background-color: #ddd;
+}
+
+/* Пошукова панель */
+.search-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-section button {
+    padding: 10px;
+    background-color: #ff68b6;
+    color: white;
+    border: none;
+}
+
+/* Банер */
+.banner {
+    background-image: url('/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.banner button {
+    padding: 15px 30px;
+    background-color: #ff68b6;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: #f5429e;
+}
+
+/* Головна секція: фільтри та сітка товарів */
+.main-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Фільтри */
+.filters {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    height: 300px;
+}
+
+.filters form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters form label,
+.filters form select,
+.filters form input {
+    margin-bottom: 10px;
+}
+
+#price-value {
+    font-weight: bold;
+    color: #ff68b6;
+    margin-left: 10px;
+}
+
+.filters form button {
+    padding: 10px;
+    background-color: #ff68b6;
+    color: white;
+    border: none;
+}
+
+/* Сітка товарів */
+.product-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+/*Фільтр-2*/
+/* Стиль для секції фільтрів */
+.filter-content {
+    display: none;
+    margin-top: 15px;
+}
+
+/* Стиль кнопки фільтрів */
+.filter-2 {
+    padding: 5px 40px;
+    background-color: #ff68b6;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 425px) {
+    .filter-content {
+        display: none; 
+    }
+    .filters{
+        display: none;
+    }
+    .filters-2 {
+        display: block; 
+    }
+}
+@media (min-width: 426px) {
+    .filters {
+        display: block; 
+    }
+
+    .filters-2 {
+        display: none; 
+    }
+}
+/* Стиль для розгорнутого фільтра */
+.filter-content.open {
+    display: block;
+}
+.filters-2 {
+    width: 250px;
+ 
+    padding: 20px;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.filters-2 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters-2 form label,
+.filters-2 form select,
+.filters-2 form input {
+    margin-bottom: 10px;
+}
+
+.filters-2 form button {
+    padding: 10px;
+    background-color: #ff68b6;
+    color: white;
+    border: none;
+}
+
+
+/* Карточка товару */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 14px;
+    margin: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-sku, .product-price {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.product-card button {
+    padding: 10px;
+    background-color: #ff68b6;
+    color: white;
+    border: none;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #ff68b6;
+}
+
+/* Підвал */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+    .search-section input {
+        width: 65%;
+        margin-bottom: 10px;
+        padding: 7px;
+    }
+
+    .search-section button {
+        margin-top: 10px;
+        padding: 8px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .filters {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-cart button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .filters {
+        width: 165px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .nav-menu ul li a {
+        font-size: 15px;
+    }
+}
+
+/* Бургер-меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    left: 20px;
+    margin-top: 7px;
+}
+
+.burger-line {
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 8px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-size: 4px;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background-color: #ff68b6;
+        position: fixed;
+        top: -17px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 60px 20px;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-menu.active ul {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 425px) {
+    .burger-menu {
+        width: 25px;
+        height: 18px;
+        margin: 0;
+    }
+
+    .burger-line {
+        height: 3px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .burger-menu {
+        width: 22px;
+        height: 16px;
+    }
+
+    .burger-line {
+        height: 3px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 16px;
+    }
+
+    .nav-menu {
+        padding: 40px 10px;
+    }
+}
+
+.filter-content {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.filter-content.open {
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.product-grid {
+    transition: transform 0.3s ease;
+}
+
+.product-grid.shift-down {
+    transform: translateY(300px); 
+}
