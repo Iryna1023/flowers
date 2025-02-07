@@ -15,7 +15,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-image: url('/img/fl-1.png');
+    background-image: url('../img/fl-1.png');
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
@@ -89,7 +89,7 @@ nav ul li a {
 
 /* Банер */
 .banner {
-    background-image: url('/img/banner.jpg');
+    background-image: url('../img/banner.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
