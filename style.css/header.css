@@ -478,6 +478,10 @@ footer a {
     .nav-menu {
         padding: 40px 10px;
     }
+    header .logo h1 {
+        font-size: 17px;
+    }
+  
 }
 
 .filter-content {
@@ -498,3 +502,31 @@ footer a {
 .product-grid.shift-down {
     transform: translateY(300px); 
 }
+.auth-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-cart .cart {
+    display: flex;
+    align-items: center;
+}
+
+.auth-cart .cart svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.auth-cart a {
+    display: flex;
+    align-items: center;
+}
+
+.auth-cart .login-icon svg, .auth-cart .cart svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
