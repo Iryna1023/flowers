@@ -26,7 +26,7 @@ body {
         transform: translateY(-100px) translateX(0);
     }
     100% {
-        transform: translateY(50vh) translateX(0);
+        transform: translateY(60vh) translateX(0);
     }
 }
 
